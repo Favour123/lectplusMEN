@@ -1,0 +1,219 @@
+/* ------resources__first------ */
+      .resources__first{
+            justify-content:space-between;
+            gap:2rem;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+
+      }
+      .resources__first img{
+            width:560px;
+            object-fit: contain;
+      }
+      .first__content{
+
+      }
+      .first__content h2{
+      font-size: 50px;
+      font-weight: 500;
+      line-height: 72.25px;
+
+      }
+      .first__content p{
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 46.24px;
+      }
+ /*----------- about__award------------------ */
+.about__award{
+      margin-bottom: 4rem;
+}
+.award__prize{
+      display:flex;
+      justify-content: center;
+      flex-wrap: wrap;
+}
+.prizeone{
+width: 50%;
+padding-bottom: 2rem;
+padding-right: 1rem;
+text-align: center;
+}
+.prizetwo{
+      width: 50%;
+      text-align: center;
+}
+/* ----------------------about__core ------------------*/
+.about__core{
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+}
+.header__core{
+      flex:1;
+}
+.about__coreSecond{
+      flex: 2;
+     
+}
+.inner__core{
+      display: flex;
+      gap: 10px;
+      padding-bottom: 1rem;
+      flex-direction: row;
+      align-items: baseline;
+}
+.inner__core p {
+      display: flex;
+      font-size: 28px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 33.68px;
+}
+.inner__core span{
+      font-weight: 400;
+      display: block;
+      text-align: center;
+}
+.header__core h2{
+      position: relative;
+      font-family: 'Lato';
+      font-size: 54px;
+      font-weight: 700;
+      line-height: 64.95px;
+      margin-bottom: 2rem;
+      padding-bottom: 0.6rem;
+      color: rgba(84, 84, 84, 1);
+
+}
+.header__core h2::before {
+      content: "";
+      position: absolute;
+      width: 128px;
+      height: 8px;
+      background-color: rgba(242, 129, 80, 1);
+      top: 100%;
+}
+.inner__core i{
+      color:var(--color-hover);
+      font-size: 22px;
+}
+/* -----------about__about----- */
+.about__about h2{
+      position: relative;
+      font-size: 42px;
+      font-weight: 500;
+      line-height: 60.69px;
+      margin-bottom: 2rem;
+      padding-bottom: 0.6rem;
+}
+.about__about h2::before{
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 8px;
+      background-color: rgba(242, 129, 80, 1);
+      top: 100%;
+}
+.about__award h3{
+      position: relative;
+      margin-bottom: 2rem;
+      font-size: 42px;
+      font-weight: 500;
+      line-height: 60.69px;
+      padding-bottom: 0.6rem;
+}
+.about__award h3::before{
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 8px;
+      background-color: rgba(242, 129, 80, 1);
+      top: 100%;
+}
+/*--------------------- about__education--------------------- */
+.about__back{
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 1;
+}
+.about__education h3{
+      font-size: 42px;
+      font-weight: 500;
+      line-height: 60.69px;
+}
+.line{
+      position: relative;
+
+      margin-bottom: 2rem;
+      padding-bottom: 0.6rem;
+}
+.line::before{
+      content: "";
+      position: absolute;
+      width: 128px;
+      height: 8px;
+      background-color: rgba(242, 129, 80, 1);
+      top: 100%;
+}
+.education__flex{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+}
+.education__level p,.about__about p,.inner__core p,.first__content p{
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 26.79px;
+}
+.education__level p span{
+      color: var(--color-hover);
+}
+
+      .background__contain {
+      position: absolute;
+      top: 38%;
+      left: 0;
+      width: 100%;
+      height: 65%;
+      background-color: rgba(247, 246, 243, 1);
+      clip-path: polygon(0% 0%, 100% 22%, 100% 61%, 100% 90%, 0 100%);
+      z-index: -1;
+      }
+      .about__award, .about__education {
+            background: none;
+            position: relative;
+            z-index: 2;
+        }
+      @media screen and (max-width:769px){
+            .prizeone{
+            width: 100%;
+            padding-bottom: 2rem;
+            padding-right: 0rem;
+                  }
+            .prizetwo{
+                  width: 100%;
+            }  
+            .about__core{
+                  flex-direction: column;
+            }
+            .inner__core span{
+                  display:inline;
+            }
+            .inner__core p{
+                  display: block;
+            }
+            .education__flex{
+                        grid-template-columns: repeat(1, 1fr);
+                        gap: 1rem;
+                  }
+            .resources__first{
+            grid-template-columns: repeat(1,1fr);
+
+              }
+              .background__contain{
+                  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+                  height: 64%;
+                  top: 40%;
+              }
+      }
