@@ -9,7 +9,7 @@ connectDB()
 app.use(cors(
    {
       origin:(https://lectplus-men.vercel.app),
-      method:("POST","GET"),
+      method:["POST","GET"],
       credential:true
    }
 ))
