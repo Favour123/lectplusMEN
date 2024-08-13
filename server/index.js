@@ -1,19 +1,33 @@
-const express = require("express")
-const app = express()
-const cors = require("cors")
+
+const express = require("express");
+const app = express();
+const cors = require("cors");
 const dotenv = require("dotenv").config();
-const  {router} = require("./Routes/userRoutes");
+const { router } = require("./Routes/userRoutes");
 const { connectDB } = require("./model/db");
+
 const PORT = process.env.PORT || 5000;
-connectDB()
+
+// Connect to the database
+connectDB();
+
+// CORS middleware
 app.use(cors({
-   origin: "https://lectplus-men.vercel.app", // Allow your frontend's origin
-   methods: ["POST", "GET"], // Specify allowed methods
-   credentials: true // If you're sending cookies or auth headers, allow credentials
- }));
- 
+  origin: "https://lectplus-men.vercel.app", // Allow your frontend's origin
+  methods: ["POST", "GET"], // Specify allowed methods
+  credentials: true // Allow credentials if needed
+}));
+
+// Preflight request handling for the endpoint
+app.options('/api/post', cors());
+
+// Middleware to parse JSON bodies
 app.use(express.json());
-app.listen(PORT, () => {
-   console.log(`you are running on ${PORT}`);
-});
+
+// API routes
 app.use("/api", router);
+
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
