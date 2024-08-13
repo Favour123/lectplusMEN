@@ -23,34 +23,6 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
   
-  
-// const Myvideo = document.querySelector("#video1");
-//       function playPause(){
-//             if(Myvideo.paused){
-//                   Myvideo.play();
-//                   document.getElementById("play-btn").style.backgroundImage = "none"; 
-//                   document.getElementById("play-btn2").style.backgroundImage = "none";    
-//             }
-//             else{
-//                   Myvideo.pause();
-//                   document.getElementById("play-btn").style.backgroundImage = "url('/images/play.png')"; 
-//                   document.getElementById("play-btn2").style.backgroundImage = "url('/images/play.png')"; 
-//             }
-//       }
-//       const Myvideo2 = document.querySelector("#video2");
-//       function playPause(){
-//             if(Myvideo2.paused){
-//                   Myvideo2.play();
-//                   document.getElementById("play-btn2").style.backgroundImage = "none";    
-//             }
-//             else{
-//                   Myvideo2.pause();
-//                   document.getElementById("play-btn2").style.backgroundImage = "url('/images/play.png')"; 
-//             }
-//       }
-
-// modal
-
 
 
 // let loading = document.getElementById("loading");
