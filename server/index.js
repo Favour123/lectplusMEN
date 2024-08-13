@@ -7,10 +7,11 @@ const { connectDB } = require("./model/db");
 const PORT = process.env.PORT || 5000;
 connectDB()
 app.use(cors({
-   origin: ["https://lectplus-men.vercel.app"], // The URL of your frontend
-   methods: ["POST", "GET"], // Allowed methods
-   credentials: true // Allow credentials like cookies to be sent
+   origin: "https://lectplus-men.vercel.app", // Allow your frontend's origin
+   methods: ["POST", "GET"], // Specify allowed methods
+   credentials: true // If you're sending cookies or auth headers, allow credentials
  }));
+ 
 app.use(express.json());
 app.listen(PORT, () => {
    console.log(`you are running on ${PORT}`);
