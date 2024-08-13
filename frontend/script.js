@@ -113,7 +113,7 @@ closemodal.forEach((modal)=>{
         };
     
         try {
-            const response = await fetch("http://localhost:8000/api/post", {
+            const response = await fetch("http://lectplus-menserver.vercel.app/api/post", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -146,76 +146,6 @@ closemodal.forEach((modal)=>{
     }
     
 
-//     modal.addEventListener("click", async (el) => {
-//         el.preventDefault();
-    
-//         // Get updated input values inside the event listener
-//         let fullName = document.getElementById("fullName").value.trim();
-//         let Email = document.getElementById("Email").value.trim();
-//         let description = document.getElementById("description").value.trim();
-//         let message = document.getElementById("message");
-    
-//         // Validation checks
-//         if (!fullName || !Email || !description) {
-//             message.innerHTML = "Please fill in all fields";
-//             message.style.color = "red";
-//             return;
-//         } 
-        
-//         if (!validEmail(Email)) {
-//             message.innerHTML = "Invalid Email";
-//             message.style.color = "red";
-//             return;
-//         } 
-        
-//         if (description.length < 15) {
-//             message.innerHTML = "Description must be at least 15 characters long";
-//             message.style.color = "red";
-//             return;
-//         }
-    
-//         // Form data object
-//         const formData = {
-//              fullName,
-//              Email,
-//             description: description,
-//             active:true
-//         };
-    
-    
-//         try {
-//             const response = await fetch("http://localhost:8000/api/post", {
-//                 method: "POST",
-//                 headers: {
-//                     "Content-Type": "application/json"
-//                 },
-//                 body: JSON.stringify(formData),
-//             });
-            
-    
-//             if (response.ok) {
-//                 message.innerHTML = "Form submitted successfully";
-//                 message.style.color = "green";
-//                 message.innerHTML += `<i class="fa fa-check"></i>`;
-//             } else {
-//                 const result = await response.json();
-//                 message.innerHTML = result.message || "Error submitting form";
-//                 message.style.color = "red";
-//             }
-//         } catch (error) {
-//             console.log(error);
-//             message.innerHTML = "Server error, please try again later";
-//             message.style.color = "red";
-//         }
-//     });
-// })
-// // document.getElementById("closemodal")
-
-// // Email validation function
-// function validEmail(email) {
-//     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//     return re.test(String(email).toLowerCase());
-// }
 
 let currentIndex = 0;
 const items = document.querySelectorAll('.carousel-item');
