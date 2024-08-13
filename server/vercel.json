@@ -6,7 +6,7 @@
       "use": "@vercel/node"
     },
     {
-      "src": "index.html",
+      "src": "frontend/index.html",
       "use": "@vercel/static"
     },
     {
@@ -19,7 +19,7 @@
     }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/index.js" },
+    { "src": "/api/(.*)", "dest": "frontend/index.js" },
     { "src": "/", "dest": "/index.html" }
   ]
 }
