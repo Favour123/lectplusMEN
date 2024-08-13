@@ -85,13 +85,14 @@ closemodal.forEach((modal)=>{
         };
     
         try {
-            const response = await fetch("http://lectplus-menserver.vercel.app/api/post", {
+            const response = await fetch("https://lectplus-menserver.vercel.app/api/post", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json"
+                  "Content-Type": "application/json"
                 },
-                body: JSON.stringify(formData),
-            });
+                body: JSON.stringify(data)
+              });
+              
     
             if (response.ok) {
                 message.innerHTML = `✔️ Form submitted successfully`;
