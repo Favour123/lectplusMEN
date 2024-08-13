@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.js",
+      "src": "server/index.js",
       "use": "@vercel/node"
     },
     {
@@ -10,21 +10,17 @@
       "use": "@vercel/static"
     },
     {
-      "src": "styles.css",
+      "src": "frontend/styles.css",
       "use": "@vercel/static"
     },
     {
-      "src": "script.js",
+      "src": "frontend/script.js",
       "use": "@vercel/static"
     }
   ],
   "routes": [
-<<<<<<< HEAD
-    { "src": "/api/(.*)", "dest": "frontend/index.js" },
-    { "src": "/", "dest": "/index.html" }
-=======
-    { "src": "/api/(.*)", "dest": "/index.js" },
+    { "src": "/api/(.*)", "dest": "server/index.js" },
     { "src": "/", "dest": "frontend/index.html" }
->>>>>>> e993d507717a3160f05c373199a04db592b54205
   ]
 }
+
