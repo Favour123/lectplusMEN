@@ -8,8 +8,8 @@ const PORT = process.env.PORT || 5000;
 connectDB()
 app.use(cors(
    {
-      origin:(lectplus-menserver.vercel.app),
-      method:("POST","GET"),
+      origin:(https://lectplus-men.vercel.app),
+      method:["POST","GET"],
       credential:true
    }
 ))

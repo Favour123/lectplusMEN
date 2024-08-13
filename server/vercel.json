@@ -19,7 +19,12 @@
     }
   ],
   "routes": [
+<<<<<<< HEAD
     { "src": "/api/(.*)", "dest": "frontend/index.js" },
     { "src": "/", "dest": "/index.html" }
+=======
+    { "src": "/api/(.*)", "dest": "/index.js" },
+    { "src": "/", "dest": "frontend/index.html" }
+>>>>>>> e993d507717a3160f05c373199a04db592b54205
   ]
 }
