@@ -99,7 +99,6 @@ closemodal.forEach((modal) => {
             message.style.color = "red";
          }
       } catch (error) {
-         console.error(error);
          message.innerHTML = `❌ Server error, please try again later`;
          message.style.color = "red";
       } finally {
