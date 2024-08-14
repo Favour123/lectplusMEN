@@ -6,5 +6,10 @@
          "use": "@vercel/node"
       }
    ],
+   "functions": {
+    "api/**.js": {
+      "maxDuration": 60 // Increase the timeout to 60 seconds
+    }
+  },
    "routes": [{ "src": "/(.*)", "dest": "/" }]
 }
