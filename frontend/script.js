@@ -82,7 +82,7 @@ closemodal.forEach((modal) => {
       };
 
       try {
-         const response = await fetch("https://lectplus-menserver.vercel.app/post", {
+         const response = await fetch("https://lectplus-menserver.vercel.app/api/post", {
             method: "POST",
             headers: {
                "Content-Type": "application/json",

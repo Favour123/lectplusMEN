@@ -13,20 +13,18 @@ connectDB();
 // CORS middleware
 app.use(
    cors({
-      origin: ["https://lectplus-men.vercel.app"], // Allow your frontend's origin
-      methods: ["POST", "GET"], // Specify allowed methods
-      credentials: true, // Allow credentials if needed
+      origin: ["https://lectplus-men.vercel.app"], 
+      methods: ["POST", "GET"], 
+      allowedHeaders:["Content-Type", "Authorization"],
+      credentials: true, 
    })
 );
-
-// Preflight request handling for the endpoint
-app.options("/post", cors());
 
 // Middleware to parse JSON bodies
 app.use(express.json());
 
 // API routes
-app.use(router);
+app.use("/api",router);
 
 // Start the server
 app.listen(PORT, () => {
