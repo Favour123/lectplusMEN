@@ -24,7 +24,7 @@ app.use(
 app.use(express.json());
 
 // API routes
-app.use("/api",router);
+app.use(router);
 
 // Start the server
 app.listen(PORT, () => {
